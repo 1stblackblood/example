@@ -19,6 +19,7 @@ func Test(t *testing.T){
 
 		g.Expect(ok).NotTo(BeTrue())
 		g.Expect(err).NotTo(BeNil())
-		g.Expect(err.Error()).To(ContainSubstring("Field Ea is required"))
+		
+		g.Expect(err.Error()).To(ContainSubstring("Field Ea must be a valid email address"))
 	})
 }
